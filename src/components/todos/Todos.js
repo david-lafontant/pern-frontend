@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import Todo from '../todo/Todo';
 import getAllTodos from '../../utils/getAllTodos';
 
@@ -7,6 +7,7 @@ const Todos = () => {
   useEffect(() => { getAllTodos(setTodos) }, [todos])
   return (
     <div>
+
       <ul>
         {todos.map(todo => <Todo key={todo.todo_id} todo={todo} />)}
       </ul>
